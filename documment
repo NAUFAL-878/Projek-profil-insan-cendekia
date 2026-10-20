@@ -187,7 +187,7 @@ class="scroll-smooth">
                 <div class="relative mx-auto max-w-md lg:max-w-none">
                     <div class="absolute -inset-1 bg-gradient-to-r from-emerald-600 to-gold-500 rounded-2xl blur opacity-30"></div>
                     <div class="relative bg-navy-800 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl">
-                        <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop" alt="Siswa Boarding School" class="w-full h-80 sm:h-96 object-cover">
+                        <img src="aset/pmbpresentasi.png" alt="Siswa Boarding School" class="w-full h-80 sm:h-96 object-cover">
                         <div class="p-6 bg-navy-900/95 border-t border-slate-700">
                             <div class="flex items-center gap-4">
                                 <div class="w-12 h-12 rounded-full bg-emerald-600/20 text-emerald-400 flex items-center justify-center shrink-0">
@@ -434,7 +434,7 @@ class="scroll-smooth">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="ekskul-container">
                 <!-- Card 1 -->
                 <div class="ekskul-card akademik bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-all">
-                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=500&auto=format&fit=crop" alt="Science Club" class="w-full h-48 object-cover">
+                    <img src="aset/club.png" alt="Science Club" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-full">Akademik</span>
                         <h3 class="font-bold text-lg text-navy-900 mt-3 mb-2">Science & Olympiad Club</h3>
@@ -507,9 +507,9 @@ class="scroll-smooth">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Item 1 -->
                 <div class="group relative rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
-                    <img src="https://images.unsplash.com/photo-1564769625905-50e93615e769?q=80&w=600&auto=format&fit=crop" alt="Masjid Utama" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
+                    <img src="aset/masjid.png" alt="Masjid patra Utama" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-900/30 to-transparent flex flex-col justify-end p-6 text-white">
-                        <h3 class="font-bold text-xl mb-1">Masjid Pusat Kampus</h3>
+                        <h3 class="font-bold text-xl mb-1"> </h3>
                         <p class="text-xs text-slate-300">Kapasitas 1.500 jamaah ber-AC lengkap dengan area halaqah Al-Qur'an.</p>
                     </div>
                 </div>
@@ -993,309 +993,119 @@ class="scroll-smooth">
     </script>
 </body>
 </html>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+<section class="panel-foto">
+  <h2>📸 Ganti Foto Website</h2>
+  <p>Klik foto website yang ingin diganti, lalu pilih foto dari komputer.</p>
 
-body {
+  <input
+    type="file"
+    id="pilihFoto"
+    accept="image/*"
+  />
+
+  <button type="button" onclick="gantiFoto()">
+    Ganti Foto Terpilih
+  </button>
+
+  <p id="statusFoto">Belum ada foto yang dipilih.</p>
+</section>
+
+<style>
+.panel-foto {
+  max-width: 500px;
+  margin: 25px auto;
+  padding: 22px;
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px #00000012;
   font-family: Arial, sans-serif;
-  background: #f3f6fb;
-  color: #17243b;
 }
 
-header {
-  background: linear-gradient(135deg, #071a35, #123c70);
+.panel-foto h2 {
+  color: #1d4ed8;
+  margin-top: 0;
+}
+
+.panel-foto input {
+  display: block;
+  width: 100%;
+  margin: 15px 0;
+}
+
+.panel-foto button {
+  background: #2563eb;
   color: white;
-  padding: 35px 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: clamp(24px, 4vw, 38px);
-  margin-bottom: 12px;
-}
-
-header p {
-  color: #e2c782;
-  letter-spacing: 2px;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 30px auto;
-  padding: 0 18px;
-}
-
-h2 {
-  margin: 28px 0 18px;
-  color: #102d53;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
-}
-
-.card {
-  background: white;
-  padding: 18px;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px #122b4b12;
-  border: 1px solid #e2e8f0;
-}
-
-.photo {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  background: #e7edf5;
-  border-radius: 10px;
-  display: block;
-  margin-bottom: 15px;
-}
-
-.placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #64748b;
-  font-size: 15px;
-  text-align: center;
-}
-
-label {
-  display: block;
-  font-size: 14px;
-  font-weight: bold;
-  margin: 12px 0 7px;
-}
-
-input[type="text"],
-input[type="file"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccd6e3;
-  border-radius: 8px;
-  background: white;
-}
-
-input[type="file"] {
-  font-size: 13px;
-}
-
-button {
+  padding: 12px 18px;
   border: none;
-  padding: 11px 15px;
   border-radius: 8px;
   cursor: pointer;
-  font-weight: bold;
-  margin-top: 12px;
 }
 
-.save {
-  background: #123c70;
-  color: white;
+.panel-foto button:hover {
+  background: #1e40af;
 }
 
-.remove {
-  background: #edf1f6;
-  color: #34445a;
-  margin-left: 5px;
+/* Foto yang dapat diganti */
+.foto-bisa-diganti {
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.campus {
-  color: #987323;
-  margin-top: 8px;
-  font-size: 14px;
-}
-
-footer {
-  margin-top: 40px;
-  padding: 25px;
-  text-align: center;
-  background: #071a35;
-  color: white;
-}
-
-.note {
-  color: #64748b;
-  font-size: 13px;
-  margin-top: 12px;
-  line-height: 1.6;
+.foto-bisa-diganti:hover {
+  outline: 3px solid #3b82f6;
+  outline-offset: 3px;
 }
 </style>
-</head>
-
-<body>
-
-<header>
-  <h1>SMA PATRA UTAMA</h1>
-  <p>BOARDING SCHOOL</p>
-  <br>
-  <div>Berakhlak • Berilmu • Berprestasi</div>
-</header>
-
-<main class="container">
-
-  <h2>01. Foto Sekolah</h2>
-  <div class="grid">
-    <article class="card">
-      <img class="photo placeholder"
-           id="schoolPreview"
-           alt="Foto gedung sekolah"
-           src="">
-
-      <label for="schoolFile">Pilih foto gedung sekolah</label>
-      <input type="file" id="schoolFile"
-             accept="image/*">
-
-      <p class="note">
-        Pilih foto gedung, gerbang, lapangan, atau fasilitas sekolah.
-      </p>
-    </article>
-  </div>
-
-  <h2>02. Galeri Prestasi Siswa</h2>
-  <div class="grid" id="achievementGrid"></div>
-
-  <h2>03. Alumni Perguruan Tinggi Favorit</h2>
-  <div class="grid" id="alumniGrid"></div>
-
-  <p class="note">
-    Tips: gunakan foto JPG, PNG, atau WebP. Foto dan nama alumni
-    dapat kamu masukkan sendiri. Data kampus harus disesuaikan
-    dengan informasi alumni yang benar.
-  </p>
-
-</main>
-
-<footer>
-  <h3>SMA Patra Utama Boarding School</h3>
-  <p style="margin-top:10px">
-    Membangun Generasi Unggul Masa Depan
-  </p>
-</footer>
 
 <script>
-function createCard(container, type, number) {
-  const isAlumni = type === "alumni";
-  const title = isAlumni
-    ? "Nama Alumni " + number
-    : "Prestasi Siswa " + number;
+let fotoTerpilih = null;
 
-  const card = document.createElement("article");
-  card.className = "card";
+// Klik foto di website untuk memilihnya
+document.querySelectorAll(".foto-bisa-diganti")
+.forEach(function(foto) {
+  foto.addEventListener("click", function() {
+    fotoTerpilih = foto;
 
-  card.innerHTML = `
-    <img class="photo placeholder" alt="${title}">
-    <label>Pilih foto dari komputer</label>
-    <input type="file" accept="image/*" class="fileInput">
-
-    <label>${isAlumni ? "Nama alumni" : "Nama siswa"}</label>
-    <input type="text" class="personName"
-      placeholder="Masukkan nama">
-
-    <label>${isAlumni ? "Universitas tujuan" : "Nama prestasi"}</label>
-    <input type="text" class="detail"
-      placeholder="${isAlumni
-        ? "Contoh: Universitas Indonesia"
-        : "Contoh: Juara Olimpiade Sains"}">
-
-    <button class="save">Simpan data</button>
-    <button class="remove">Hapus foto</button>
-    <p class="note status">Belum ada foto dipilih.</p>
-  `;
-
-  const preview = card.querySelector("img");
-  const fileInput = card.querySelector(".fileInput");
-  const nameInput = card.querySelector(".personName");
-  const detailInput = card.querySelector(".detail");
-  const status = card.querySelector(".status");
-
-  let currentURL = "";
-
-  fileInput.addEventListener("change", () => {
-    const file = fileInput.files[0];
-    if (!file) return;
-
-    if (!file.type.startsWith("image/")) {
-      alert("Silakan pilih file gambar.");
-      fileInput.value = "";
-      return;
-    }
-
-    if (currentURL) URL.revokeObjectURL(currentURL);
-
-    currentURL = URL.createObjectURL(file);
-    preview.src = currentURL;
-    preview.classList.remove("placeholder");
-    status.textContent = "Foto siap digunakan.";
+    document.getElementById("statusFoto").textContent =
+      "Foto terpilih: " + (foto.alt || "Foto website");
   });
+});
 
-  card.querySelector(".save").addEventListener("click", () => {
-    if (!nameInput.value.trim()) {
-      alert("Masukkan nama terlebih dahulu.");
-      return;
-    }
+function gantiFoto() {
+  const input = document.getElementById("pilihFoto");
+  const status = document.getElementById("statusFoto");
+  const file = input.files[0];
 
-    if (!currentURL && !preview.src) {
-      alert("Pilih foto terlebih dahulu.");
-      return;
-    }
-
-    status.textContent = "Data siap ditampilkan di kartu ini.";
-    alert("Data berhasil diperbarui pada tampilan halaman.");
-  });
-
-  card.querySelector(".remove").addEventListener("click", () => {
-    if (currentURL) URL.revokeObjectURL(currentURL);
-
-    currentURL = "";
-    preview.removeAttribute("src");
-    preview.classList.add("placeholder");
-    fileInput.value = "";
-    nameInput.value = "";
-    detailInput.value = "";
-    status.textContent = "Foto telah dihapus.";
-  });
-
-  container.appendChild(card);
-}
-
-const schoolFile = document.getElementById("schoolFile");
-const schoolPreview = document.getElementById("schoolPreview");
-let schoolURL = "";
-
-schoolFile.addEventListener("change", () => {
-  const file = schoolFile.files[0];
-  if (!file) return;
-
-  if (!file.type.startsWith("image/")) {
-    alert("Pilih file gambar yang valid.");
-    schoolFile.value = "";
+  if (!fotoTerpilih) {
+    status.textContent = "Klik dahulu foto website yang ingin diganti.";
     return;
   }
 
-  if (schoolURL) URL.revokeObjectURL(schoolURL);
+  if (!file) {
+    status.textContent = "Silakan pilih foto dari komputer.";
+    return;
+  }
 
-  schoolURL = URL.createObjectURL(file);
-  schoolPreview.src = schoolURL;
-  schoolPreview.classList.remove("placeholder");
-});
+  if (!file.type.startsWith("image/")) {
+    status.textContent = "File harus berupa gambar.";
+    return;
+  }
 
-for (let i = 1; i <= 3; i++) {
-  createCard(document.getElementById("achievementGrid"),
-              "achievement", i);
-}
+  // Batasi ukuran file hingga 10 MB
+  if (file.size > 10 * 1024 * 1024) {
+    status.textContent = "Ukuran foto maksimal 10 MB.";
+    return;
+  }
 
-for (let i = 1; i <= 6; i++) {
-  createCard(document.getElementById("alumniGrid"),
-              "alumni", i);
+  const pembaca = new FileReader();
+
+  pembaca.onload = function(e) {
+    fotoTerpilih.src = e.target.result;
+    status.textContent = "Foto berhasil diganti pada tampilan website!";
+    input.value = "";
+  };
+
+  pembaca.readAsDataURL(file);
 }
 </script>
-
-</body>
-</html>
